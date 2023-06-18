@@ -1,0 +1,9 @@
+
+/*
+* If you have an "Invalid slice definition file" error with PhpMumbleAdmin:
+*/
+
+php-Ice 3.4 and superior:
+Load the php-slice file of your murmur daemon. If you are not using an official
+major stable version of murmur, you will have to create your own php-slice file.
+See the readme.txt for more information about that.

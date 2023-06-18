@@ -1,0 +1,53 @@
+
+0.4.5
+
+    /* Changes */
+
+PMA now requires at least PHP 5.4.0 to work.
+Support added for murmur 1.2.9 to 1.2.19.
+Support added for ice 3.6.
+Support dropped for murmur 1.2.0 to 1.2.2.
+Support dropped for Ice 3.2 and 3.3.
+Fusion of parameters "show total of online users" and "show online users"
+    into a global "show online users" for the servers overview table page.
+The change user comment in channels has been moved into the action menu.
+Code cleaning.
+Some minor user interface modification and improvement.
+
+    /* Bug fix */
+
+Fix somes user interface missplacements.
+Fix 2 bugs with the external viewer.
+Fix sanboxes to use UTF-8 (dotted yellow boxes).
+Fix minors bugs.
+
+
+0.4.4
+
+    /* Changes */
+
+Added Php-Ice 3.5 support.
+Added murmur 1.2.8 support.
+The code has been cleaned and transformed into a MVC structure,
+    separation betwin PHP and HTML code.
+Upgraded to HTML 5.
+Added the possibility to indicate the path for Ice.php with PMA
+    (it's not require anymore to do it in the php.ini).
+    See configuration->settings->general.
+The directory slice_php become slicesPhp and it's now only here to add
+    custom slice-php files.
+Removed the feature which disable a profile on invalid slice file, as is
+    too agressive.
+You can choose if you want to authorize mumble users authentication for PMA
+    when a server is offline. (See configuration->settings->mumble accounts).
+Improvement of mumble users channel viewer.
+Admins registrations view has been reworked.
+Print date in email headers.
+
+    /* Bug fix */
+
+Fix a security issue with "debug emails".
+Fix some XSS issues.
+Fix a bug with "last activity" in mumble registrations pages.
+Fix a minor bug with who's online footer and mumble users.
+Fix a lot a others minors bugs.

@@ -1,0 +1,74 @@
+
+/*****************************************
+ * ****************************************
+    VÉRIFIER L'INSTALL AVANT DE RELEASE
+ * ****************************************
+*****************************************/
+
+
+/* ********************
+* IMPERATIFS
+* *********************/
+
+Ecrire le fichiers dans un tmp, avant de le copier en ecrasant l'ancien (security).
+revoire les locales systemes
+<time> et les datetime (période et une fonction commune).
+
+Support de ice 3.6
+    voire si "l'invocation timeout" est utile pour PMA...
+
+Revoire PMA_datas::get()
+
+/* ********************
+* A revoir
+* *********************/
+
+revoire les setCurrentRoute(
+les $widgets imbriqués.
+les reference ( &$ )
+vérifier les global $TEXT
+vérifier les PMA_core::getInstance()
+revoire PMA_db
+revoire $prx->getParameter(
+meilleur compression ipv6
+un retour global pour $prx->getRegistration(
+$_SESSION['page_vserver']
+    $_SESSION['page_vserver']['id']
+    $_SESSION['page_vserver']['cid']
+    $_SESSION['page_vserver']['uSess']
+    $_SESSION['page_vserver']['aclID']
+    $_SESSION['page_vserver']['groupID']
+un db cache pour les avatars
+
+/* ********************
+* Idées
+* *********************/
+
+Un systeme pour acheter des serveurs mumble "on the fly".
+"Armoniser" le zend OPcache avec PMA
+option for root admins and admins to retreive there forgotten passwords
+
+
+/* **********************
+* Pour la version 1.0.0
+* ***********************/
+
+Convertir tout les CRLF en LF - PHP fig-standards
+delete SuperUser_Ru class
+viewer JSON & XML
+IP ban pour PMA
+prev_next dans edit registration
+permettre d'envoyer directement un email
+Permettre d'utiliser une bdd (sql et peut-être mysql)
+Ajouter une classe HeadAdmin
+Creer une BAL (pas obligatoire).
+
+/* ****************************
+* Les erreurs à ne plus faire
+* *****************************/
+
+Le nom du serveur DOIT se faire avec le parametre "registername".
+Le message d'erreur "web access disabled" doit etre explicite, ce qui permet
+    de ne pas s'acharner sur un serveur.
+Les bans de murmurs sont basée sur une IP valide.
+upload_tmp_dir ne peut etre changé que dans le php.ini.

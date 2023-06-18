@@ -1,0 +1,17 @@
+
+/*
+* This file report some changement during murmur developpement.
+*/
+
+
+ * Murmur 1.2.4
+New variable for user session object : "udpPing"
+New variable for user session object : "tcpPing"
+New ini parameter : "sendVersion"
+New ini parameter : "opusThreshold"
+New ini parameter : "channelNestingLimit"
+New ini parameter : "suggestPositional"
+New ini parameter : "suggestPushToTalk"
+getLogLen does not require icesecretwrite anymore
+setState() permit to modify the "name" variable to change user login during all his session.
+new class : Murmur_TextMessage
