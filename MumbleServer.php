@@ -15,9 +15,16 @@
 //
 
 
-namespace
+namespace Ice
 {
-    require_once 'Ice/SliceChecksumDict.php';
+    global $Ice__t_SliceChecksumDict;
+
+    if(!isset($Ice__t_SliceChecksumDict))
+    {
+        global $IcePHP__t_string;
+        global $IcePHP__t_string;
+        $Ice__t_SliceChecksumDict = IcePHP_defineDictionary('::Ice::SliceChecksumDict', $IcePHP__t_string, $IcePHP__t_string);
+    }
 }
 
 namespace MumbleServer

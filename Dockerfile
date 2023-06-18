@@ -1,3 +1,5 @@
+#by u6bkep (https://github.com/u6bkep/phpMumbleAdmin-docker)
+
 FROM ubuntu:22.04
 
 COPY zeroc.gpg /etc/apt/keyrings
@@ -9,12 +11,13 @@ RUN echo  "deb [signed-by=/etc/apt/keyrings/zeroc.gpg] https://download.zeroc.co
 	apt-get -y update && \
 	apt-get -y install ca-certificates apache2 && \
 	apt-get -y update && \
-	apt-get -y install php-zeroc-ice libapache2-mod-php nano && \
-	rm /var/www/html/index.html
-	
+	apt-get -y install php-zeroc-ice libapache2-mod-php && \
+	rm /var/www/html/index.html && \
+	rm -rf /var/lib/apt/lists/*
 
 COPY phpMumbleAdmin /var/www/html
 RUN chmod 777 /var/www/html/program/cache/sessions/ /var/www/html/cache/ /var/www/html/config/ /var/www/html/logs/ /var/www/html/program/cache/
 VOLUME [ "/var/www/html" ]
+EXPOSE 80
 
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
