@@ -16,7 +16,7 @@ RUN echo  "deb [signed-by=/etc/apt/keyrings/zeroc.gpg] https://download.zeroc.co
 	rm -rf /var/lib/apt/lists/*
 
 COPY phpMumbleAdmin /var/www/html
-COPY Murmur-1.4.0.php /var/www/html/slicesPhp
+COPY Murmur-1.4.0.php Murmur-1.3.4.php /var/www/html/slicesPhp/ice37/
 RUN chmod 777 /var/www/html/program/cache/sessions/ /var/www/html/cache/ /var/www/html/config/ /var/www/html/logs/ /var/www/html/program/cache/
 VOLUME [ "/var/www/html" ]
 EXPOSE 80
