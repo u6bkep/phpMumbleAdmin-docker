@@ -1,6 +1,6 @@
 #by u6bkep (https://github.com/u6bkep/phpMumbleAdmin-docker)
 
-FROM ubuntu:22.04
+FROM ubuntu:22.04 AS base
 
 COPY zeroc.gpg /etc/apt/keyrings
 
@@ -15,8 +15,20 @@ RUN echo  "deb [signed-by=/etc/apt/keyrings/zeroc.gpg] https://download.zeroc.co
 	rm /var/www/html/index.html && \
 	rm -rf /var/lib/apt/lists/*
 
+FROM base AS slice_compiler
+
+RUN apt-get -y update && \
+	apt-get -y install zeroc-ice-compilers && \
+	rm -rf /var/lib/apt/lists/*
+
+COPY slices/*.ice /slices/
+
+RUN slice2php -I/usr/share/ice/slice/ --output-dir /slices /slices/*.ice
+
+FROM base AS php_mumble_admin
+
 COPY phpMumbleAdmin /var/www/html
-COPY Murmur-1.4.0.php Murmur-1.3.4.php /var/www/html/slicesPhp/ice37/
+COPY --from=slice_compiler /slices/*.php /var/www/html/slicesPhp/ice37/
 RUN chmod 777 /var/www/html/program/cache/sessions/ /var/www/html/cache/ /var/www/html/config/ /var/www/html/logs/ /var/www/html/program/cache/
 VOLUME [ "/var/www/html" ]
 EXPOSE 80
