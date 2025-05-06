@@ -30,7 +30,7 @@ class PMA_MurmurConnectionIce37 extends PMA_MurmurConnectionIce36
         if (!interface_exists('Ice\ObjectFactory')) {
             $this->throwException('ice_could_not_load_Icephp_file');
         }
-        if (!class_exists('\Murmur\MetaPrxHelper')) {
+        if (!class_exists('\MumbleServer\MetaPrxHelper')) {
             $this->throwException('ice_no_slice_definition_found');
         }
     }
@@ -62,7 +62,7 @@ class PMA_MurmurConnectionIce37 extends PMA_MurmurConnectionIce36
         */
         try {
             $proxy = $this->ICE->stringToProxy('Meta -e 1.0 :tcp -h '.$this->host.' -p '.$this->port.' -t '.$this->timeout);
-            $this->meta = \Murmur\MetaPrxHelper::checkedCast($proxy)->ice_context($this->secret);
+            $this->meta = \MumbleServer\MetaPrxHelper::checkedCast($proxy)->ice_context($this->secret);
         } catch (Exception $e) {
             $this->throwException($e);
         }

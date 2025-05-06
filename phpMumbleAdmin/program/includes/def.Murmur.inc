@@ -22,49 +22,49 @@ if (! defined('PMA_STARTED')) { die('You cannot call this script directly !'); }
 
 // Workaround to use the old global constant with Ice 3.7
 if (PMA_ICE_VERSION_INT >= 30700) {
-    if (! defined('Murmur_PermissionWrite') && defined('\\Murmur\\PermissionWrite')) {
-        define('Murmur_PermissionWrite', \Murmur\PermissionWrite);
+    if (! defined('Murmur_PermissionWrite') && defined('\\MumbleServer\\PermissionWrite')) {
+        define('Murmur_PermissionWrite', \MumbleServer\PermissionWrite);
     }
-    if (! defined('Murmur_PermissionTraverse') && defined('\\Murmur\\PermissionTraverse')) {
-        define('Murmur_PermissionTraverse', \Murmur\PermissionTraverse);
+    if (! defined('Murmur_PermissionTraverse') && defined('\\MumbleServer\\PermissionTraverse')) {
+        define('Murmur_PermissionTraverse', \MumbleServer\PermissionTraverse);
     }
-    if (! defined('Murmur_PermissionEnter') && defined('\\Murmur\\PermissionEnter')) {
-        define('Murmur_PermissionEnter', \Murmur\PermissionEnter);
+    if (! defined('Murmur_PermissionEnter') && defined('\\MumbleServer\\PermissionEnter')) {
+        define('Murmur_PermissionEnter', \MumbleServer\PermissionEnter);
     }
-    if (! defined('Murmur_PermissionSpeak') && defined('\\Murmur\\PermissionSpeak')) {
-        define('Murmur_PermissionSpeak', \Murmur\PermissionSpeak);
+    if (! defined('Murmur_PermissionSpeak') && defined('\\MumbleServer\\PermissionSpeak')) {
+        define('Murmur_PermissionSpeak', \MumbleServer\PermissionSpeak);
     }
-    if (! defined('Murmur_PermissionMuteDeafen') && defined('\\Murmur\\PermissionMuteDeafen')) {
-        define('Murmur_PermissionMuteDeafen', \Murmur\PermissionMuteDeafen);
+    if (! defined('Murmur_PermissionMuteDeafen') && defined('\\MumbleServer\\PermissionMuteDeafen')) {
+        define('Murmur_PermissionMuteDeafen', \MumbleServer\PermissionMuteDeafen);
     }
-    if (! defined('Murmur_PermissionMove') && defined('\\Murmur\\PermissionMove')) {
-        define('Murmur_PermissionMove', \Murmur\PermissionMove);
+    if (! defined('Murmur_PermissionMove') && defined('\\MumbleServer\\PermissionMove')) {
+        define('Murmur_PermissionMove', \MumbleServer\PermissionMove);
     }
-    if (! defined('Murmur_PermissionMakeChannel') && defined('\\Murmur\\PermissionMakeChannel')) {
-        define('Murmur_PermissionMakeChannel', \Murmur\PermissionMakeChannel);
+    if (! defined('Murmur_PermissionMakeChannel') && defined('\\MumbleServer\\PermissionMakeChannel')) {
+        define('Murmur_PermissionMakeChannel', \MumbleServer\PermissionMakeChannel);
     }
-    if (! defined('Murmur_PermissionLinkChannel') && defined('\\Murmur\\PermissionLinkChannel')) {
-        define('Murmur_PermissionLinkChannel', \Murmur\PermissionLinkChannel);
+    if (! defined('Murmur_PermissionLinkChannel') && defined('\\MumbleServer\\PermissionLinkChannel')) {
+        define('Murmur_PermissionLinkChannel', \MumbleServer\PermissionLinkChannel);
     }
-    if (! defined('Murmur_PermissionWhisper') && defined('\\Murmur\\PermissionWhisper')) {
-        define('Murmur_PermissionWhisper', \Murmur\PermissionWhisper);
+    if (! defined('Murmur_PermissionWhisper') && defined('\\MumbleServer\\PermissionWhisper')) {
+        define('Murmur_PermissionWhisper', \MumbleServer\PermissionWhisper);
     }
-    if (! defined('Murmur_PermissionTextMessage') && defined('\\Murmur\\PermissionTextMessage')) {
-        define('Murmur_PermissionTextMessage', \Murmur\PermissionTextMessage);
+    if (! defined('Murmur_PermissionTextMessage') && defined('\\MumbleServer\\PermissionTextMessage')) {
+        define('Murmur_PermissionTextMessage', \MumbleServer\PermissionTextMessage);
     }
-    if (! defined('Murmur_PermissionMakeTempChannel') && defined('\\Murmur\\PermissionMakeTempChannel')) {
-        define('Murmur_PermissionMakeTempChannel', \Murmur\PermissionMakeTempChannel);
+    if (! defined('Murmur_PermissionMakeTempChannel') && defined('\\MumbleServer\\PermissionMakeTempChannel')) {
+        define('Murmur_PermissionMakeTempChannel', \MumbleServer\PermissionMakeTempChannel);
     }
-    if (! defined('Murmur_PermissionKick') && defined('\\Murmur\\PermissionKick')) {
-        define('Murmur_PermissionKick', \Murmur\PermissionKick);
+    if (! defined('Murmur_PermissionKick') && defined('\\MumbleServer\\PermissionKick')) {
+        define('Murmur_PermissionKick', \MumbleServer\PermissionKick);
     }
-    if (! defined('Murmur_PermissionBan') && defined('\\Murmur\\PermissionBan')) {
-        define('Murmur_PermissionBan', \Murmur\PermissionBan);
+    if (! defined('Murmur_PermissionBan') && defined('\\MumbleServer\\PermissionBan')) {
+        define('Murmur_PermissionBan', \MumbleServer\PermissionBan);
     }
-    if (! defined('Murmur_PermissionRegister') && defined('\\Murmur\\PermissionRegister')) {
-        define('Murmur_PermissionRegister', \Murmur\PermissionRegister);
+    if (! defined('Murmur_PermissionRegister') && defined('\\MumbleServer\\PermissionRegister')) {
+        define('Murmur_PermissionRegister', \MumbleServer\PermissionRegister);
     }
-    if (! defined('Murmur_PermissionRegisterSelf') && defined('\\Murmur\\PermissionRegisterSelf')) {
-        define('Murmur_PermissionRegisterSelf', \Murmur\PermissionRegisterSelf);
+    if (! defined('Murmur_PermissionRegisterSelf') && defined('\\MumbleServer\\PermissionRegisterSelf')) {
+        define('Murmur_PermissionRegisterSelf', \MumbleServer\PermissionRegisterSelf);
     }
 }
