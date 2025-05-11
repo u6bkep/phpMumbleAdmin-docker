@@ -1,6 +1,6 @@
 #by u6bkep (https://github.com/u6bkep/phpMumbleAdmin-docker)
 
-FROM ubuntu:22.04 AS base
+FROM ubuntu:24.04 AS base
 
 COPY zeroc.gpg /etc/apt/keyrings
 
